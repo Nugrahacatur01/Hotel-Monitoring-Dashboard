@@ -1,36 +1,45 @@
-# **Hotel Monitoring Dashboard**
 
-## **📉 Business Insights: Cancellation Profile & Revenue Loss Analysis (Januari)**
-Analisis ini berfokus pada pembedahan pola pembatalan reservasi untuk mengidentifikasi area risiko dan peluang mitigasi pendapatan (Revenue Recovery).
 
-### **1. Identifikasi Kerugian Pendapatan Berdasarkan Tipe Kamar**
-**Insight:** *Grafik "Potential Revenue by Market Segment Type" menunjukkan bahwa Room_Type 2 merupakan kontributor kerugian terbesar akibat pembatalan, yaitu mencapai 73.13% (175K). Sementara Room_Type 1 menyumbang 25.17% (60K).*
+# Hotel Monitoring Dashboard: September Analysis
+## Project Overview
+Proyek ini bertujuan untuk menganalisis performa operasional hotel selama bulan September. Melalui dashboard ini, manajemen dapat memantau tren pendapatan harian, komposisi tamu berdasarkan segmen pasar, perilaku pemesanan (lead time), serta preferensi layanan seperti tipe kamar dan rencana makan (meal plan).
 
-**Strategi:** *Hotel perlu mengevaluasi kebijakan pembatalan khusus untuk Room_Type 2. Mempertimbangkan skema non-refundable rate untuk tipe kamar populer ini dapat membantu mengamankan pendapatan.*
+## Key Performance Indicators (KPIs)
+Berdasarkan data bulan September (Status: Not Canceled), berikut adalah ringkasan performa utama:
 
-### **2. Titik Kritis Lead Time (31-90 Hari)**
-**Insight:** *Lonjakan pembatalan pada bulan january paling signifikan terjadi pada reservasi dengan Lead Time 31-90 hari (tercatat sebanyak 20 pembatalan). Ini jauh lebih tinggi dibandingkan pembatalan last-minute (0-30 hari) yang hanya berjumlah 4.*
+- Total Booking: 1,606 pemesanan berhasil.
+- Potential Revenue: 20.43M.
+- Average Daily Rate (ADR): 3.70K.
+- Average Length of Stay: 2.79.
+- Guest Composition: 4.92%.
 
-**Strategi:** *Tamu yang memesan jauh-jauh hari memiliki tingkat ketidakpastian lebih tinggi. Tim reservasi disarankan melakukan re-confirmation otomatis pada H-14 kedatangan untuk memvalidasi status pesanan atau menawarkan opsi perubahan tanggal.*
+## Dashboard Insights
+### 1. Revenue Trends
+Grafik Daily Revenue menunjukkan fluktuasi pendapatan yang signifikan sepanjang bulan. Puncak pendapatan terjadi pada tanggal 15 dan 25, sementara penurunan tajam terlihat pada tanggal 10, 17, dan 24. Hal ini mengindikasikan adanya pola permintaan mingguan atau pengaruh event tertentu.
 
-### **3. Karakteristik Tamu: Segmentasi Online & Corporate**
-**Insight:** *Segmen Online tetap menjadi penyumbang volume pembatalan tertinggi (0.0100K), diikuti oleh segmen Corporate (0.0060K).*
+### 2. Market Segment Analysis
+**Booking by Market Segment:** Segmen Online mendominasi pasar dengan 1.08K booking, diikuti oleh segmen Offline (0.39K). Segmen Aviation dan Complementary memberikan kontribusi paling kecil.
 
-**Strategi:** *Mengingat segmen korporasi juga memiliki tingkat pembatalan yang muncul secara signifikan, hotel perlu meninjau kembali perjanjian kontrak korporasi (SLA) terkait batas waktu pembatalan tanpa penalti untuk menjaga stabilitas okupansi.*
+**Revenue by Room Type:** Room Type 7 adalah penyumbang pendapatan terbesar (52.17%), diikuti oleh Room Type 4 (31.09%). Strategi penetapan harga pada kedua tipe kamar ini sangat krusial bagi total revenue.
 
-### **4. Dampak Durasi Menginap (Avg Length of Stay)**
-**Insight:** *Nilai Avg Length of Stay pada data pembatalan menunjukkan angka 57 (akumulasi). Hal ini mengindikasikan bahwa pembatalan sering terjadi pada rencana kunjungan berdurasi panjang (long-stay).*
+### 3. Booking Behavior
+**Lead Time:** Mayoritas tamu melakukan pemesanan dalam rentang 31-90 hari sebelum kedatangan (569 booking). Pemesanan last minute (0-7 hari) merupakan kategori terendah (288 booking), menunjukkan bahwa tamu cenderung merencanakan perjalanan mereka jauh-jauh hari.
 
-**Strategi:** *Kehilangan satu pesanan long-stay berdampak besar pada ketersediaan inventaris jangka panjang. Penerapan deposit di awal untuk reservasi di atas 7 malam sangat direkomendasikan untuk meminimalkan dampak finansial.*
+**Meal Plan Preference:** Meal Plan 1 sangat mendominasi dengan 1.20K pemesanan, menunjukkan bahwa paket standar ini paling diminati oleh tamu dibandingkan opsi lainnya.
 
-### **5. Pola Pembatalan Harian (Daily Revenue Loss)**
-**Insight:** *Grafik "Daily Revenue" menunjukkan fluktuasi pembatalan yang mencapai puncaknya pada hari ke-25 bulan Januari.*
+## Tech Stack
+Data Visualization: Power BI / Tableau (Sesuai tool yang Anda gunakan)
 
-**Strategi:** *Analisis lebih lanjut diperlukan untuk melihat apakah lonjakan pembatalan di tanggal tersebut terkait dengan faktor eksternal (cuaca, kebijakan maskapai, atau event tertentu) guna mempersiapkan strategi waiting list yang lebih efektif.*
+## Data Source: 
+kaggle.com
 
-### **🛠️ Tech Stack & Analytical Focus**
-**Tool:** Microsoft Power BI
+## Analysis Focus: 
+Revenue Management & Customer Behavior
 
-**Metric Focus:** Cancellation Behavior, Lead Time Analysis, Revenue at Risk.
+## How to Use the Dashboard
+- Month Filter: Gunakan slicer di sisi kiri untuk melihat data bulan tertentu.
+- Booking Status: Filter antara pemesanan yang sukses (Not_Canceled) atau yang dibatalkan.
+- Market Segment: Klik pada kategori segmen untuk melihat detail spesifik pada grafik lainnya (Cross-filtering).
 
-**Objective:** Menyediakan data pendukung bagi manajemen untuk menurunkan angka pembatalan melalui kebijakan reservasi yang berbasis data.
+**Author:** Nugraha Catur Septian Patra \
+**Date  :** March 2026
